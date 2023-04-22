@@ -1,22 +1,7 @@
-alembic==1.10.3
-click==8.1.3
-dominate==2.7.0
-Flask==2.2.3
-Flask-Bootstrap==3.3.7.1
-Flask-Migrate==4.0.4
-Flask-SQLAlchemy==3.0.3
-Flask-WTF==1.1.1
-greenlet==2.0.2
-importlib-metadata==6.6.0
-importlib-resources==5.12.0
-itsdangerous==2.1.2
-Jinja2==3.1.2
-Mako==1.2.4
-MarkupSafe==2.1.2
-python-dotenv==1.0.0
-SQLAlchemy==2.0.10
-typing_extensions==4.5.0
-visitor==0.1.3
-Werkzeug==2.2.3
-WTForms==3.0.1
-zipp==3.15.0
+from app import app
+
+
+@app.route('/')
+@app.route('/index')
+def index():
+    return 'hello'

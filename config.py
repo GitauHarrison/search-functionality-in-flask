@@ -14,4 +14,7 @@ class Config(object):
 
     # Pagination: int() used to convert string value to integer
     POSTS_PER_PAGE = int(os.environ.get('POSTS_PER_PAGE')) or 5
+
+    # Search
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
     

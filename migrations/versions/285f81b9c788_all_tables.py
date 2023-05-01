@@ -1,8 +1,8 @@
-"""user and post models
+"""all tables
 
-Revision ID: 1a55b07729aa
+Revision ID: 285f81b9c788
 Revises: 
-Create Date: 2023-04-29 00:02:37.213297
+Create Date: 2023-05-01 16:10:13.758174
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '1a55b07729aa'
+revision = '285f81b9c788'
 down_revision = None
 branch_labels = None
 depends_on = None

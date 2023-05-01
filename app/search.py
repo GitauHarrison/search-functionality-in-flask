@@ -8,7 +8,7 @@ def add_to_index(index, model):
     Get the index, id, and search content
     """
 
-    # Check if elasticsearch is configured, if not return nothing
+    #  # Check if elasticsearch is configured, if not return nothing
     if not app.elasticsearch:
         return
     payload = {}
@@ -26,15 +26,18 @@ def remove_from_index(index, model):
     app.elasticsearch.delete(index=index, id=model.id)
 
 def query_index(index, query, page, per_page):
-    if app.elasticsearch:
+    """
+    Search across multiple model fields
+    Return list of object IDs and the total value of items searched
+    """
+    if not app.elasticsearch:
         return [], 0
     search = app.elasticsearch.search(
         index=index,
         body={
-            'query': {'multi_match': {'query': query, 'fields': ['*']}},
-            'from': (page - 1) * per_page,
-            'size': per_page
-        }
-    )
+                'query': 
+                    {'multi_match': {'query': query, 'fields': ['*']}},
+                    'from': (page - 1) * per_page,
+                    'size': per_page})
     ids = [int(hit['_id']) for hit in search['hits']['hits']]
     return ids, search['hits']['total']['value']

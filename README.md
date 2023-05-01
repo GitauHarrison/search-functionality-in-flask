@@ -1,5 +1,9 @@
 # Add A Search Feature To Your Flask App
 
+| Add Post | Search Results |
+| -------- | -------------- |
+| ![Add post](app/static/images/home.png) | ![Search results](app/static/images/search.png) |
+
 Demo app displaying how to use Elasticsearch to implement 'search' functionality from a model containing user-generated data.
 
 ### Table Of Content
@@ -72,5 +76,5 @@ Demo app displaying how to use Elasticsearch to implement 'search' functionality
 ## Reference
 
 - [Install elasticsearch in your localhost](https://github.com/GitauHarrison/notes/blob/master/search/install_elasticsearch_localhost.md)
-- [Install elasticsearch in your live linux server](https://github.com/GitauHarrison/notes/blob/master/search/install_elasticsearch_linode.md)
+- [Install elasticsearch in your live linux server, eg Linode](https://github.com/GitauHarrison/notes/blob/master/search/install_elasticsearch_linode.md)
 - [Implement search functionality using elasticsearch](https://github.com/GitauHarrison/notes/blob/master/search/implement_elasticseach.md)

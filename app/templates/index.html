@@ -4,24 +4,17 @@
 {% block app_context %}
 <div class="row">
     <div class="col-md-12">
-        <h1>{{ title }}</h1>
-
-        <!-- Search -->
-        <div class="row text center">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4">
-                <!-- Search form will go here -->
-            </div>
-            <div class="col-lg-4"></div>
-        </div>
+        <h1 class="text-center">{{ title }}</h1>
 
         <!-- Post form -->
         <div class="row mb-4">
-            <div class="col-lg-6">
+            <div class="col-md-4"></div>
+            <div class="col-lg-4">
                 <!-- Post form -->
                 <p>{{ wtf.quick_form(form) }}</p>
                 <!-- End of post form -->
             </div>
+            <div class="col-md-4"></div>
         </div>
 
         <div class="row">
@@ -31,7 +24,7 @@
                     {% for post in posts %}
                         <tr>
                             <td width="70px"><img src="{{ post.author.avatar(35) }}" /></td>
-                            <td>{{ post.author.username }} said {{ moment(post.timestamp).fromNow() }}: <br> {{ post.body }}</td>
+                            <td><strong>{{ post.author.username }}</strong> said {{ moment(post.timestamp).fromNow() }}: <br> {{ post.body }}</td>
                         </tr>
                     {% endfor %}
                 </table>

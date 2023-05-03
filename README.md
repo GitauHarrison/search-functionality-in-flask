@@ -29,6 +29,9 @@ Demo app displaying how to use Elasticsearch to implement 'search' functionality
 
 ## Testing
 
+Unfortunately, a live demo with Elasticsearch is not available. Payment is required to enable such a service, which at the moment is not really necessary. You can run the application in your local machine to test it out.
+
+
 - Clone this repo:
 
     ```python

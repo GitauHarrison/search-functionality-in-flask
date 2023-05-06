@@ -1,5 +1,7 @@
 # Add A Search Feature To Your Flask App
 
+![search](app/static/images/search.gif)
+
 | Add Post | Search Results |
 | -------- | -------------- |
 | ![Add post](app/static/images/home.png) | ![Search results](app/static/images/search.png) |
@@ -29,7 +31,7 @@ Demo app displaying how to use Elasticsearch to implement 'search' functionality
 
 ## Testing
 
-Unfortunately, a live demo with Elasticsearch is not available. Payment is required to enable such a service, which at the moment is not really necessary. You can run the application in your local machine to test it out.
+Unfortunately, the search functionality may not work in the [demo link](https://search-feature-flask.onrender.com). Payment is required to enable such a service, which at the moment is not really necessary. You can run the application in your local machine to test it out.
 
 
 - Clone this repo:

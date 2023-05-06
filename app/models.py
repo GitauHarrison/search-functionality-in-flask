@@ -10,9 +10,26 @@ class SearchableMixin(object):
         ids, total = query_index(cls.__tablename__, expression, page, per_page)
         if total == 0:
             return cls.query.filter_by(id=0), 0
-        when = []
+        # when = []
+        # for i in range(len(ids)):
+        #     when.append((ids[i], i))
+
+        # --------------
+        '''
+        As of Flask-SQLAlchemy from version 3.0.2, the case() function 
+        has changed in a backwarwards incompatible way. The first argument 
+        is now a dictionary instead of a list.
+
+        If you use a list, you will get the error:
+
+        sqlalchemy.exc.ArgumentError: The "whens" argument to case(), 
+        when referring to a sequence of items, is now passed as a series 
+        of positional elements, rather than as a list.
+        '''
+        # --------------
+        when = {}
         for i in range(len(ids)):
-            when.append((ids[i], i))
+            when[ids[i]] = i
         return cls.query.filter(cls.id.in_(ids)).order_by(
             db.case(when, value=cls.id)), total
 

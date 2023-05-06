@@ -25,7 +25,7 @@ def search():
         page=page + 1) if total > page * app.config['POSTS_PER_PAGE'] else None
     prev_url = url_for(
         'search',
-        q=g.search_form.a.data,
+        q=g.search_form.q.data,
         page=page - 1) if total > 1 else None
     return render_template(
         'search.html',
